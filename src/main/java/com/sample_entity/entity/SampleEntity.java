@@ -22,7 +22,7 @@ public class SampleEntity extends ThrownItemEntity implements FlyingItemEntity {
     }
     @Override
     protected Item getDefaultItem() {
-        return ModItems.SAMPLEITEM;
+        return ModItems.SAMPLE_ITEM;
     }
 
     @Override

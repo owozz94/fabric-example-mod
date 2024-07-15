@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "sample_entity:item/cannonball"
+    "layer0": "sample_entity:item/sample"
   }
 }

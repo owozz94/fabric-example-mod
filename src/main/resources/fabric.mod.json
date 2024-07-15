@@ -23,7 +23,7 @@
 		]
 	},
 	"mixins": [
-		"sample_entity.mixins.json",
+      "sample_entity.mixins.json",
 		{
 			"config": "sample_entity.client.mixins.json",
 			"environment": "client"
