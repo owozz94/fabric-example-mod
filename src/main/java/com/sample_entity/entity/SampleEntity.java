@@ -1,12 +1,15 @@
 package com.sample_entity.entity;
 
 import com.sample_entity.item.ModItems;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.FlyingItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.text.Text;
+import net.minecraft.util.hit.EntityHitResult;
+import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;
 
 public class SampleEntity extends ThrownItemEntity implements FlyingItemEntity {
@@ -33,5 +36,21 @@ public class SampleEntity extends ThrownItemEntity implements FlyingItemEntity {
     @Override
     public boolean cannotBeSilenced() {
         return super.cannotBeSilenced();
+    }
+
+    @Override
+    protected void onCollision(HitResult hitResult) {
+        super.onCollision(hitResult);
+        if(!this.getWorld().isClient){
+            this.getWorld().createExplosion(this, this.getX(), this.getY(), this.getZ(), 2, false, World.ExplosionSourceType.BLOCK);
+            this.discard();
+        }
+    }
+
+    @Override
+    protected void onEntityHit(EntityHitResult entityHitResult) {
+        super.onEntityHit(entityHitResult);
+        Entity entity = entityHitResult.getEntity();
+        entity.damage(this.getDamageSources().explosion(null), 6.0f);
     }
 }
