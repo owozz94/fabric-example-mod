@@ -31,12 +31,13 @@ public class ModItems {
     }
     public static void registerModItems() {
         ExampleMod.LOGGER.info("Registering mod items for " + ExampleMod.MOD_ID);
-        //DispenserBlock.registerBehavior(ModItems.SAMPLE_ITEM, new SampleDispenserBehavior() {
-         //   @Override
-           // protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
-               // return Util.make(new SampleEntity(world, position.getX(), position.getY(), position.getZ()), entity -> entity.setItem(stack));
-          //  }
-        ///});
+//        DispenserBlock.registerBehavior(ModItems.SAMPLE_ITEM, new SampleDispenserBehavior() {
+//            @Override
+//            protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
+//                return Util.make(new SampleEntity(world, position.getX(), position.getY(), position.getZ()), entity -> entity.setItem(stack));
+//            }
+//           }
+//        );
         //아이템 등록
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItems::addItemsToCombatItemGroup);
 

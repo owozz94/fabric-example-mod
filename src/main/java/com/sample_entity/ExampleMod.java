@@ -15,6 +15,7 @@ public class ExampleMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		//모드 아이템 등록
 		ModItems.registerModItems();
 		ModEntities.registerModEntities();
 		ModSounds.registerSounds();

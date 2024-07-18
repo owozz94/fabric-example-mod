@@ -1,10 +1,12 @@
 package com.sample_entity.utils;
 
+import com.sample_entity.sound.ModSounds;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.block.dispenser.ItemDispenserBehavior;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.BlockPointer;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Position;
@@ -28,7 +30,7 @@ public abstract class SampleDispenserBehavior extends ItemDispenserBehavior {
 
     @Override
     protected void playSound(BlockPointer pointer) {
-        // pointer.world().playSound(null, pointer.pos().getX(), pointer.pos().getY(), pointer.pos().getZ(), ModSounds.);
+        pointer.world().playSound(null, pointer.pos().getX(), pointer.pos().getY(), pointer.pos().getZ(), ModSounds.CANNONBALL_SHOT, SoundCategory.BLOCKS, 0.5F, 1F);
         super.playSound(pointer);
     }
 

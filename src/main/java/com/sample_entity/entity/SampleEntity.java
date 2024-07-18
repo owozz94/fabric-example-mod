@@ -51,6 +51,9 @@ public class SampleEntity extends ThrownItemEntity implements FlyingItemEntity {
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
         Entity entity = entityHitResult.getEntity();
+        //폭발 피해
         entity.damage(this.getDamageSources().explosion(null), 6.0f);
+        System.out.println("entity hit!!!");
     }
 }
+//소리, 빛(필수 x), 아이템(설치형), 픽셀로 찍기 쉬운거 (블록 xx), 기능 확장성 좋은템   모래(가중치), 화로
