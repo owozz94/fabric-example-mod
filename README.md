@@ -1,9 +1,5 @@
-# Fabric Example Mod
+# Fabric Simple Mod
 
-## Setup
+## Fabric Simple Test Mod - simple-canonballs clone
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+마인크래프트 패브릭 테스트 샘플 모드입니다. 현재 개발 진행중이며, 던졌을 때 데미지를 입히는 아이템을 제작중입니다.
